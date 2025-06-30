@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Página Simples</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE THE FUTURE</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
     <section class="first-screen">
         <div class="header">
@@ -14,31 +19,202 @@
         </div>
 
         <div class="main">
-            <img id="btnFullscreen" src="assets/code_the_future_hor_primário.svg" alt="Logo Code The Future" width="410">
-        
-            <button>Quero me inscrever</button>
+            <img id="btnFullscreen" src="assets/code_the_future_hor_primário.svg" alt="Logo Code The Future"
+                width="410">
+
+            <button onclick="redirecionarInscricao()">Quero me inscrever</button>
             <p>Inscrições até 10 de agosto de 2025</p>
         </div>
     </section>
 
     <section class="second-screen">
-        <div class="columns-about">
-            <div class="region-why-take-part">
-                <img id="btnFullscreen" src="assets/code_the_future_ver_primário.svg" alt="Logo Senac + SKA" width="500">
-                <div class="text-about">
-                    <p>é um curso gratuito oferecido pela SKA, em parceria com o Senac!</p>
+        <div class="container">
+            <div class="columns-about">
+                <div class="region-why-take-part">
+                    <img id="btnFullscreen" src="assets/code_the_future_logo.svg" alt="Logo Senac + SKA" width="500">
+                    <div class="text-about">
+                        <h3 class="main-title">é um curso gratuito oferecido pela SKA, em parceria com o Senac!</h3>
+
+                        <span class="sub-title">Na sua segunda edição, o programa é voltado para jovens que querem ir
+                            além
+                            na tecnologia.</span>
+
+                        <p class="light-text">
+                            A ideia é aprender na prática, criando projetos que resolvem problemas de verdade, tudo para
+                            se preparar para os desafios do mundo real.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column-questions">
+                <h3>
+                    Porque participar?
+                </h3>
+                <div class="list">
+                    <ul>
+                        <li>Aprenda de verdade sobre programação e desenvolvimento</li>
+                        <li>Mexa com tecnologias reais e desafios do dia a dia</li>
+                        <li>Conheça gente da área e faça conexões</li>
+                        <li>Pode rolar estágio na SKA no fim do programa!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <button class="btn-gradient-2" onclick="redirecionarInscricao()">Quero me inscrever</button>
+        </footer>
+    </section>
+
+    <section>
+        <div class="about-us">
+            <h2>Conheça as mentoras</h2>
+            <div class="profile-container">
+                <div class="profile">
+                    <img src="assets/AMANDA.svg" alt="Amanda">
+                    <span>AMANDA</span>
+                    <p>
+                        Tem 19 anos e cursa Bacharelado em Ciência da Computação na Unisinos. Trabalha à 3 anos SKA,
+                        onde
+                        iniciou como estagiária de qualidade e foi efetivada como Desenvolvedora Full Stack,
+                        consolidando
+                        sua
+                        carreira na área de tecnologia com foco em desenvolvimento de software.
+                    </p>
+                </div>
+                <div class="profile">
+                    <img src="assets/Andressa.svg" alt="Andressa">
+                    <span>ANDRESSA</span>
+                    <p>
+                        Estudante de Ciência da Computação na Unisinos, atua há 3 anos na SKA. Durante sua trajetória na
+                        empresa, iniciou como Analista de Qualidade (QA) e atualmente trabalha como Desenvolvedora Full
+                        Stack,
+                        contribuindo em projetos com foco em inovação e performance.
+                    </p>
+                </div>
+                <div class="profile">
+                    <img src="assets/CAMILA.svg" alt="Camila">
+                    <span>CAMILA</span>
+
+                    <p>
+                        É graduada em Design Gráfico, especializada em Design de Serviço e Interação. Já atuou como
+                        designer
+                        gráfico em times de marketing e também como criadora de conteúdo em equipes de comunicação e
+                        endomarketing. Hoje como UX/UI Designer na SKA, une criatividade e foco total na experiência do
+                        usuário.
+                    </p>
+                </div>
+                <div class="profile">
+                    <img src="assets/MALU.svg" alt="Malu">
+                    <span>MALU</span>
+                    <p>
+                        Tem 19 anos e cursa Sistemas de Informação na Unisinos. Atuou como estagiária de QA, sendo
+                        posteriormente efetivada na mesma área. Acumula 3 anos de experiência como QA e atualmente
+                        trabalha
+                        como
+                        Coordenadora de Projetos, unindo experiência técnica e habilidades de liderança na área de
+                        tecnologia.
+                    </p>
                 </div>
             </div>
 
-            <div class="region-about">
-                aaaaa
-            </div>
-        </div>
-        <div class="parent">
-         <button class="btn-gradient-2">Quero me inscrever</button>
         </div>
     </section>
 
-  <script src="script.js"></script>
+
+    <section>
+        <div class="learn-more">
+            <h2>
+                <strong>Quer saber todos os detalhes das aulas,<br> atividades, regras e o que vem por aí?</strong>
+            </h2>
+            <p>
+                É só ler o regulamento abaixo.
+            </p>
+            <button onclick="download()">Baixar regulamento</button>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="titulo-five">
+            <h2>Dúvidas Frequentes</h2>
+        </div>
+        <div class="frequently-questions">
+
+            <details class="details">
+                <summary> A QUEM ESSE PROJETO É DESTINADO?</summary>
+                <p>
+                    O projeto Code the future é um curso gratuito de programação e desenvolvimento web,
+                    oferecido pela SKA, em parceria com o Senac. A segunda edição do projeto é voltada para jovens
+                    mulheres
+                    estudantes do curso técnico em informática para internet do Senac São Leopoldo.
+                </p>
+            </details>
+            <details class="details">
+                <summary> QUAIS SÃO OS PRÉ-REQUISITOS PARA PARTICIPAR?</summary>
+                <p>
+                    Para se inscrever e participar do programa Code the future, as alunas devem cumprir alguns
+                    pré-requisitos, como: se identificar com o gênero feminino;
+                    ter 16 anos ou mais; estar devidamente matriculada na instituição de ensino Senac São Leopoldo;
+                    estar cursando a partir do segundo ano do ensino técnico do Senac São Leopoldo; estar ativa em
+                    relação às aulas e compromissos para com a instituição; ter, pelo menos, dois contraturnos escolares
+                    livres para aulas e mentorias do projeto; ter noção de lógica de programação e estar disposta a
+                    adquirir novos conhecimentos.
+                </p>
+            </details>
+            <details class="details">
+                <summary> ONDE ME INSCREVO PARA PARTICIPAR?</summary>
+                <p>
+                    As inscrições serão realizadas entre os dias <strong>05 e 10 de agosto de 2025</strong>
+                    exclusivamente neste site.
+                </p>
+            </details>
+            <details class="details">
+                <summary> POR QUE PARTICIPAR?</summary>
+                <p>Ao participar do projeto Code the future SKA - Senac, as alunas selecionadas poderão se capacitar
+                    dentro da área de desenvolvimento de software e programação;
+                    ter contato com tecnologias e problemas reais; se aproximar do mercado de trabalho; ter a
+                    possibilidade de ser contratada como estagiária da empresa SKA,
+                    além de viver uma experiência de trabalho na prática.
+                </p>
+            </details>
+            <details class="details">
+                <summary> QUAL A QUANTIDADE DE VAGAS DO PROJETO?</summary>
+                <p>O projeto tem vagas limitadas a 10 participantes. Ao final das atividades, a SKA poderá convidar até
+                    <strong>04</strong> destas alunas para ingressarem
+                    no time de desenvolvimento da empresa.
+                </p>
+            </details>
+            <details class="details">
+                <summary> COMO SERÁ FEITA A SELEÇÃO?</summary>
+                <p>
+                    A seleção acontecerá entre os dias <strong>11 e 19 de agosto</strong> em 2 etapas, com as
+                    candidatas
+                    com suas
+                    inscrições previamente validadas.
+                    <br>
+                    <strong>Primeira etapa - validação das inscrições.</strong> Entre os dias <strong>13 e 17 de
+                        agosto</strong>, uma comissão da empresa
+                    SKA vai analisar e validar as informações inseridas no
+                    formulário de inscrição e as respostas da prova de lógica, que será realizado no dia <strong>12 de
+                        agosto</strong> de 2025.
+                    <br>
+                    <strong>Segunda etapa - avaliação de perfil.</strong> As candidatas selecionadas na primeira etapa
+                    participarão de
+                    uma dinâmica presencial no dia <strong>19 de agosto</strong> para que a
+                    empresa SKA avalie os perfis das estudantes para o projeto.
+                </p>
+            </details>
+            <details class="details">
+                <summary> QUANDO SERÃO DIVULGADAS AS SELECIONADAS PARA O PROJETO?</summary>
+                <p>
+                    A divulgação será feita no dia <strong>25 de agosto</strong> por e-mail, para todas as inscritas no
+                    projeto.
+                </p>
+            </details>
+        </div>
+
+    </section>
 </body>
+
 </html>
