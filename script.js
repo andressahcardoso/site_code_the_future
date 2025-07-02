@@ -1,11 +1,7 @@
-   function redirecionarInscricao() {
-      window.location.href = "https://forms.office.com/Pages/ResponsePage.aspx?id=eLMrX52SH0OIdP6D40vsiborjADzxvRGmwWKsn-mEdxUNEJPTlpLTjVRVkVSWVQ0Tk8xVDVDMVM5Si4u";
-    }
-
-   function download() {
+function download() {
     const link = document.createElement('a');
-      link.href = 'arquivo.pdf'; // coloque a URL da imagem aqui
-      link.download = 'Fourmulário.pdf';
+      link.href = 'https://skaautomacao-my.sharepoint.com/personal/andressa_cardoso_ska_com_br/_layouts/15/download.aspx?UniqueId=10c76aff-5018-4bc9-b0d8-34f0e640ead4&Translate=false&tempauth=v1.eyJzaXRlaWQiOiI5OWIwZGZkNS0wMjMzLTRiNTAtYTc2My1mNDlhNzVmOWU2MDgiLCJhcHBfZGlzcGxheW5hbWUiOiJNaWNyb3NvZnQgVGVhbXMiLCJhcHBpZCI6IjFmZWM4ZTc4LWJjZTQtNGFhZi1hYjFiLTU0NTFjYzM4NzI2NCIsImF1ZCI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9za2FhdXRvbWFjYW8tbXkuc2hhcmVwb2ludC5jb21ANWYyYmIzNzgtOTI5ZC00MzFmLTg4NzQtZmU4M2UzNGJlYzg5IiwiZXhwIjoiMTc1MTQ4NzQxNiJ9.CkAKDGVudHJhX2NsYWltcxIwQ0lyZ2tNTUdFQUFhRm05cFVsSnJVMGhKVm10VFdEVXlUbFZpY0dkVlFVRXFBQT09CgoKBHNuaWQSAjY0EgsIysrepdfrnD4QBRoNMTc3LjY5LjM1LjIyNSosdTlGSDRZcW5tQWp3aHE5QWhBRmlpN0xaa1cvdkJVZktjcHk2YzBTaDRuVT0wowE4AUIQoa3vFMuQAJBwNAotg_4IH0oQaGFzaGVkcHJvb2Z0b2tlbmokMDA1ZTJkNzktNjkwNS1jMDM5LTQ3MjMtMmEwYTcwOTU4OGVhcikwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDQ5N2RmNTNlMEBsaXZlLmNvbXoBMoIBEgl4sytfnZIfQxGIdP6D40vsiZIBBUtldmlumgEPU2lsdmEgQm9ydG9sZXRvogEaa2V2aW4uYm9ydG9sZXRvQHNrYS5jb20uYnKqARAxMDAzMjAwNDk3REY1M0UwsgFXY29udGFpbmVyLnNlbGVjdGVkIG15ZmlsZXMud3JpdGUgYWxsc2l0ZXMuZnVsbGNvbnRyb2wgYWxsc2l0ZXMubWFuYWdlIGFsbHByb2ZpbGVzLndyaXRlyAEB.o17g_ZmCT8SWcdWm9ZUDSTJCNmgT8H3Lmq7pIS4VdZk&ApiVersion=2.0'; // coloque a URL da imagem aqui
+      link.download = 'Fourmulário de inscrição.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

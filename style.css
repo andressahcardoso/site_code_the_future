@@ -63,7 +63,7 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header {
@@ -79,19 +79,20 @@ img {
     text-align: end;
 }
 
-.header img {
-    cursor: pointer;
-}
-
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    height: 80vh;
+    min-height: 80vh;
+    gap: 20px;
 }
 
+.main img{
+    max-width: 100%;
+    height: 70%;
+}
 .main button {
     background-color: #ED0180;
     border: 1px solid #ED0180;
@@ -115,6 +116,96 @@ img {
     font-family: 'Montserrat';
 }
 
+.logo_mobile{
+    display: none;
+}
+
+.double_arrows{
+    display: none;
+}
+
+.logo_senac_mobile{
+    display: none;
+}
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    .first-screen {
+        width: 100%;
+        position: relative; /* Define um contexto de posicionamento para os filhos */
+    }
+
+    .main img {
+        max-height: 50vh; /* Evita que o logo fique grande demais em telas pequenas */
+        padding-bottom:30px;
+        width: auto; /* Garante a proporção correta */
+    }
+
+    .header {
+        display: none;
+    }
+
+    .logo_mobile{
+        display: block;
+    }
+
+    /* Esconde apenas o logo principal da primeira tela, e não os outros com o mesmo ID */
+    .main > #btnFullscreen{
+        display: none;
+    }
+
+    .main button {
+    background-color: #f7941d;
+    border: 1px solid #f7941d;
+    color: white;
+    border-radius: 20px;
+    padding: 1vh 0vw;
+    width: 40vw;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    }
+
+    .main p {
+        color: white;
+        border-radius: 20px;
+        padding: 2vh 0vw;
+        width: 50vw;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Montserrat';
+    }
+
+    .double_arrows{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: moverSeta 1s infinite ease-in-out;
+        }
+
+        /* Animação de vai-e-volta horizontal */
+        @keyframes moverSeta {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(10px);
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .logo_senac_mobile {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        padding: 6rem;
+        text-align: center;
+    }
+}
+
 /* Second Screen */
 
 .second-screen {
@@ -125,36 +216,29 @@ img {
     background-repeat: no-repeat;
 }
 
+.container {
+    display: flex;;
+}
+.columns-about {
+    flex-direction: column;
+    color: white;
+    font-family: 'Montserrat';
+    margin-top: 20px;
 
-.region-why-take-part {
-    width: 100%;
+    width: 50%;
     height: 100%;
     padding: 60px;
     padding-top: 80px;
 }
 
-.region-why-take-part img {
+.columns-about img {
     width: 825px;
     height: 120px;
 }
-
-.container {
-    display: flex;;
-}
-.columns-about {
-    height: 100vh;
-    flex-direction: column;
-    color: white;
-    font-family: 'Montserrat';
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
 .text-about {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: auto;
+    align-items: flex-start; /* Revertido para o padrão de desktop (alinhado à esquerda) */
     gap: 40px;
     padding-top: 40px;
 }
@@ -189,19 +273,10 @@ img {
     width: 370px;
 }
 
-/* @media screen and (max-width: 600px) and (orientation: portrait){
-    .second-screen {
-        background-image: url('assets/Fundo\ seção\ 2-1\ 1.svg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-} */
+.columns-about button {
+    display: none;
+}
+
 .button {
     background-color: transparent;
     border: 3px solid;
@@ -244,7 +319,7 @@ img {
     font-weight: 700;
     font-size: 56px;
     line-height: 100%;
-    letter-spacing: 0%;
+    /* letter-spacing: 0%; */
     color: #ffffff;
 }
 
@@ -302,6 +377,134 @@ li:nth-child(4)::before {
     padding: 30px;
 
 }
+.mobile_list{
+    display:none;
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    .second-screen {
+        background-color: black;
+        background-image: url('assets/fundo\ seção_mobile_\ 1.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .columns-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%; /* Ocupa a largura toda */
+        padding: 40px 20px; /* Ajusta o espaçamento para mobile */
+        min-height: auto; /* A altura será definida pelo conteúdo */
+        gap: 50px;
+        padding-bottom: 5rem;
+    }
+
+    .columns-about img{
+        width: 100%;
+        height: auto; /* Mantém a proporção da imagem */
+        padding-top: 6rem;
+    }
+    .text-about{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    .main-title, .sub-title, .light-text {
+        width: 75%;
+        max-width: 200vw;
+        text-align: center;
+    }
+
+
+    .columns-about button {
+        display: flex;
+        width: 40vw;
+        font-size: 30px;
+        border-radius: 30px;
+    }
+
+    .button {
+        background-color: transparent;
+        border: 3px solid;
+        border-image: linear-gradient(90deg, rgba(237, 1, 128, 1) 27%, rgba(132, 212, 239, 1) 70%);
+        border-image-slice: 1;
+        color: white;
+        padding: 2vh 1rem;
+        cursor: pointer;
+
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .footer button{
+        display: none;
+    }
+
+
+    /*parte inferior*/
+
+    .column-questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-top: auto;
+    }
+
+    .column-questions h3{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list{
+        display: none;
+    }
+
+    .mobile_list{
+        display: flex;
+        color: #ffffff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: white;
+        padding-top: 40px;
+        text-align: center;
+        gap: 2rem;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 90px;
+    };
+
+    .mobile_list img{
+        width: 45px;
+        height: 45px;
+
+    }
+}
 
 /*Third Screen/*/
 
@@ -312,18 +515,18 @@ li:nth-child(4)::before {
     justify-content: center;
     padding-top: 60px;
     padding-bottom: 60px;
-    gap: 20px;
+    gap: 30px;
 
 }
 
 .profile-container {
     display: flex;
     flex-direction: row;
-    gap: 15vh;
+    gap: 8rem;
     padding-left: 20px;
     padding-right: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 .profile {
     display: flex;
@@ -331,6 +534,15 @@ li:nth-child(4)::before {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 100%;
+}
+
+.profile-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 .profile img {
     width: 200px;
@@ -338,13 +550,11 @@ li:nth-child(4)::before {
 }
 
 .profile span{
-    width: 276.4319152832031;
     font-family: Montserrat;
     font-size: 32px;
     line-height: 100%;
     letter-spacing: 0%;
     font-weight: bold;
-
 }
 
 .profile p{
@@ -353,7 +563,6 @@ li:nth-child(4)::before {
     font-size: 24px;
     line-height: 100%;
     letter-spacing: 0%;
-
 }
 .about-us h2{
     font-family: Orbitron;
@@ -361,6 +570,73 @@ li:nth-child(4)::before {
     line-height: 100%;
     letter-spacing: 0%;
     font-weight: bolder;
+}
+
+.button-externo{
+    display: none;
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    .profile-container{
+        flex-direction: column;
+        justify-content: start;
+        gap: 20px;
+        padding: 4rem 1.5rem;
+    }
+    .about-us h2 {
+        color: #ED0180;
+        padding-bottom: 40px;
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        background-color: #1A1A1A;
+        border-radius: 20px;
+        padding: 30px ;
+        color: #ffffff;
+        gap: 20px; 
+    }
+
+    .profile-text {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .profile p {
+        text-align: left;
+    }
+
+    .profile img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .button-externo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 350px;
+        height: 80px;
+
+        background-color: #003456;
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+
+        border-radius: 30px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+
 }
 
 /* Fourth Screen */
@@ -371,7 +647,7 @@ li:nth-child(4)::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     object-fit: cover;
 
@@ -402,8 +678,10 @@ li:nth-child(4)::before {
     letter-spacing: 0%;
     color: #84D4EF;
 }
-
-.learn-more button {
+.button-mobile button{
+    display: none;
+}
+.button-download button {
   padding: 20px 40px;
   font-size: 20px;
   font-weight: bold;
@@ -412,18 +690,69 @@ li:nth-child(4)::before {
   background-color: black;
 
   border: 3px solid transparent;
-  border-radius: 20px; /* Borda bem arredondada */
+  border-radius: 20px;
   cursor: pointer;
 
   background-image:
-    linear-gradient(black, black), /* fundo interno */
-    linear-gradient(90deg, rgba(237,1,128,1) 27%, rgba(132,212,239,1) 70%); /* borda gradiente */
+    linear-gradient(black, black),
+    linear-gradient(90deg, rgba(237,1,128,1) 27%, rgba(132,212,239,1) 70%);
 
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
-/*Fifth Screen/*/*
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    .learn-more {
+        background-color: #F5F4F6;
+        background-image: none;
+        min-height: auto;
+        width: 100%;
+        object-fit: cover;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 40px;
+        text-align: center;
+    }
+    .learn-more h2{
+        text-align: center;
+        color: #003456;
+    }
+    .learn-more p{
+        text-align: center;
+        color: #003456;
+    }
+
+    .button-download{
+        display: none;
+    }
+    .button-mobile button{
+        display: flex;
+        padding: 20px 40px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        color: #f7941d;
+        background-color: #F5F4F6;
+
+        border: 3px solid transparent;
+        border-radius: 20px;
+        cursor: pointer;
+
+        background-image:
+            linear-gradient(#F5F4F6, #F5F4F6),
+            linear-gradient(90deg, #f7941d);
+
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    }
+
+}
+
+/*Fifth Screen*/
 
 .frequently-questions {
     display: flex;
@@ -459,8 +788,8 @@ li:nth-child(4)::before {
     font-size: 30px;
     line-height: 100%;
     color: #1A1A1A;
-    position: relative; /* necessário para posicionar o ::before corretamente */
-    padding-left: 25px; /* para dar espaço à seta */
+    position: relative;
+    padding-left: 25px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -487,11 +816,11 @@ li:nth-child(4)::before {
   transform: translateY(-50%) rotate(0deg);
 }
 
-/* @media screen and (max-width: 600px) and (orientation: portrait){
-    .frequently-questions summary {
-       
+@media screen and (max-width: 1080px) and (orientation: portrait){
+    .titulo-five h2{
+       color: #ED0180;
     }
-} */
+}
 
 
 .titulo-five {
